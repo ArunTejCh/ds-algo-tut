@@ -1,7 +1,6 @@
 package com.arun.strings;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
 public class MediumBasicCalculatorII {
 
@@ -32,62 +31,42 @@ public class MediumBasicCalculatorII {
 		if (s == null || s == "") {
 			return 0;
 		}
-		s = s.replaceAll(" ", "");
 
-		List<String> elems = new ArrayList<String>();
-		List<String> temp = new ArrayList<String>();
-
-		StringBuilder cur = new StringBuilder();
-
+		Stack<Integer> nums = new Stack<Integer>();
+		int no = 0;
+		char sign = '+';
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
-			if (c == '+' || c == '-' || c == '*' || c == '/') {
-				if (cur.length() > 0) {
-					elems.add(cur.toString());
-					cur = new StringBuilder();
-				}
-				elems.add(Character.toString(c));
-			}else{
-				cur.append(c);
+			if (Character.isDigit(c)) {
+				no = no * 10 + c - '0';
 			}
-		}
-		
-		if(cur.length()>0){
-			elems.add(cur.toString());
-		}
-		
-		String[] math = {"/","*","-","+"};
-		
-		for(String m : math){
-			for(int i = 0; i < elems.size(); i++){
-				if(elems.get(i).equalsIgnoreCase(m)){
-					int before = Integer.parseInt(temp.get(temp.size() - 1));
-					int after = Integer.parseInt(elems.get(i+1));
-					switch (m){
-						case "*":
-							temp.set(temp.size() - 1, (before * after)+"");
-							break;
-						case "/":
-							temp.set(temp.size() - 1, (before / after)+"");
-							break;
-						case "+":
-							temp.set(temp.size() - 1, (before + after)+"");
-							break;
-						case "-":
-							temp.set(temp.size() - 1, (before - after)+"");
-							break;
-					}
-					i++;
-				}else{
-					temp.add(elems.get(i));
+
+			if ((c!=' ' && !Character.isDigit(c)) || i == s.length() - 1) {
+				switch (sign) {
+				case '-':
+					nums.push(-no);
+					break;
+				case '+':
+					nums.push(no);
+					break;
+				case '*':
+					nums.push(nums.pop() * no);
+					break;
+				case '/':
+					nums.push(nums.pop() / no);
+					break;
 				}
+				no = 0;
+				sign = c;
 			}
-			elems = temp;
-			temp = new ArrayList<String>();
 
 		}
+
+		int res = 0;
+		for(int i : nums){
+			res = res + i;
+		}
 		
-		int res = Integer.parseInt(elems.get(0));
 		return res;
 	}
 
