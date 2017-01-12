@@ -1,9 +1,9 @@
 package com.arun.linkedlists;
 
-public class EasyOddEvenLinkedList {
+public class MediumOddEvenLinkedList {
 
 	public static void main(String[] args) {
-		EasyOddEvenLinkedList inst = new EasyOddEvenLinkedList();
+		MediumOddEvenLinkedList inst = new MediumOddEvenLinkedList();
 		
 		ListNode arg11 = null;
 		ListNode arg21 = inst.new ListNode(1);
