@@ -19,7 +19,7 @@ public class EasyStackUsingQueues {
 	}
 
 	Queue<Integer> first = new LinkedList<Integer>();
-	Queue<Integer> second = new LinkedList<Integer>();
+	//Queue<Integer> second = new LinkedList<Integer>();
 
 	// Push element x onto stack.
 	public void push(int x) {
@@ -27,11 +27,7 @@ public class EasyStackUsingQueues {
 		if (first.size() > 1) {
 			int size = first.size();
 			for (int i = 0; i < size - 1; i++) {
-				second.add(first.remove());
-			}
-
-			while (!second.isEmpty()) {
-				first.add(second.remove());
+				first.add(first.remove());
 			}
 		}
 	}
@@ -48,6 +44,6 @@ public class EasyStackUsingQueues {
 
 	// Return whether the stack is empty.
 	public boolean empty() {
-		return first.isEmpty() && second.isEmpty();
+		return first.isEmpty();
 	}
 }

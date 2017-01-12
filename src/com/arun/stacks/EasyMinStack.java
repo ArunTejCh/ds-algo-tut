@@ -1,7 +1,6 @@
 package com.arun.stacks;
 
 import java.util.Stack;
-import java.util.TreeMap;
 
 public class EasyMinStack {
 
@@ -21,29 +20,22 @@ public class EasyMinStack {
     /** initialize your data structure here. */
     public EasyMinStack() {
         mainStack = new Stack<Integer>();
-        sortedList = new TreeMap<Integer, Integer>();
     }
     
+    int min = Integer.MAX_VALUE;
     Stack<Integer> mainStack = null;
-    TreeMap<Integer,Integer> sortedList = null;
     
     public void push(int x) {
-        mainStack.push(x);
-        Integer val = sortedList.get(x);
-        if(val == null){
-        	val = 0;
-        }
-        sortedList.put(x, ++val);
+    	if(x<= min){
+    		mainStack.push(min);
+    		min = x;
+    	}
+    	mainStack.push(x);
     }
     
     public void pop() {
-        int x = mainStack.pop();
-        Integer val = sortedList.get(x);
-        if(val == 1){
-        	sortedList.remove(x);
-        }else{
-        	sortedList.put(x, --val);
-        }
+        if(mainStack.pop() == min)
+        	min = mainStack.pop();
     }
     
     public int top() {
@@ -51,7 +43,7 @@ public class EasyMinStack {
     }
     
     public int getMin() {
-        return sortedList.firstKey();
+        return min;
     }
 
 }
