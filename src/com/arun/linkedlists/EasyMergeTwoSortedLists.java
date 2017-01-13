@@ -1,7 +1,5 @@
 package com.arun.linkedlists;
 
-import com.arun.linkedlists.EasyRemoveElements.ListNode;
-
 public class EasyMergeTwoSortedLists {
 
 	public class ListNode {
