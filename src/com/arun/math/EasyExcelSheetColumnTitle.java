@@ -16,23 +16,28 @@ public class EasyExcelSheetColumnTitle {
 		assert inst.convertToTitle(arg2).equalsIgnoreCase("Z");
 		assert inst.convertToTitle(arg3).equalsIgnoreCase("AZ");
 		assert inst.convertToTitle(arg4).equalsIgnoreCase("BA");
-		assert inst.convertToTitle(arg5).equalsIgnoreCase("ZZ");
+		assert inst.convertToTitle(arg5).equalsIgnoreCase("YZ");
 		assert inst.convertToTitle(arg6).equalsIgnoreCase("AAA");
 	}
 
 	
     public String convertToTitle(int n) {
-        int a = 'A';//65
-        int z = 'Z';//90
         StringBuilder conversion = new StringBuilder();
         
         while(n > 0){
-        	conversion.append(n % 26);
-        	n = n/26;
+        	int rem = n % 26;
+        	int div = n/26;
+        	if(rem == 0){
+        		conversion.append((char)(64 + 26));
+        		div--;
+        	}else{
+        		conversion.append((char)(64 + rem));
+        	}
+        	n = div;
         }
         
         String con = conversion.reverse().toString();
         
-    	return null;
+    	return con;
     }
 }
