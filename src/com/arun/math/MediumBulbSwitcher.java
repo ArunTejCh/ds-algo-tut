@@ -24,17 +24,7 @@ public class MediumBulbSwitcher {
 	}
 
     public int bulbSwitch(int n) {
-        int onBulbs = 0;
-        for(int i = 1; i <=n ; i++){
-     	   int mul = i * i;
-     	   if(mul <= n){
-     	        onBulbs++;
-     	   }else{
-     	       break;
-     	   }
-        }
-        
-        return onBulbs;
+        return (int)Math.sqrt(n);
      }
 	
 }
