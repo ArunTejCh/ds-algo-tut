@@ -7,33 +7,39 @@ public class FirstBadVersion {
 
     }
 
-    /*public int firstBadVersion(int x) {
-        if(x == 1)
-            return x;
+    public int firstBadVersion(int n) {
+        int low = 1;
+        int high = n;
 
-        int upper = x;
-        int lower = 0;
-        while(upper != lower){
-            int mid = (upper + lower)/2;
-
-            if(this.isBadVersion(mid){
-                return (int) mid;
-            }else if(val < x){
-                if(upper == lower + 1){
-                    upper = mid;
+        while(low!=high){
+            int mid = (low + high)/2;
+            boolean bad = this.isBadVersion(mid);
+            if(!bad){
+                if(low == (high -1)){
+                    low = high;
                 }else{
-                    lower = mid;
+                    low = mid;
                 }
-
             }else{
-                if(upper == lower + 1){
-                    lower = mid;
+                if(mid == 1)
+                    return 1;
+                boolean pre = this.isBadVersion(mid - 1);
+                if(!pre){
+                    return mid;
                 }else{
-                    upper = mid;
+                    high = mid;
                 }
+
             }
+
         }
-        return lower;
-    }*/
+
+        return low;
+    }
+
+    public boolean isBadVersion(int version){
+
+        return false;
+    }
 
 }
