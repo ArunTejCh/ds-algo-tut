@@ -2,6 +2,7 @@
  * Complete the function below.
  */
 
+/*
 static int findMutationDistance(String start, String end, String[] bank) {
         if(start.equals(end)) return 0;
 
@@ -42,4 +43,5 @@ static int findMutationDistance(String start, String end, String[] bank) {
 
 
         }
+*/
 

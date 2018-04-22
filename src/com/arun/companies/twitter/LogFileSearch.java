@@ -1,3 +1,4 @@
+/*
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -7,7 +8,7 @@ import java.util.regex.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class LogSearcher {
+public class LogFileSearch {
     public Collection<String> search(Collection<String> logLines, LocalTime startDate, LocalTime endDate){
         Collection<String> ret = new ArrayList<String>();;
         ArrayList<String> lines = ((ArrayList<String>)logLines);
@@ -53,4 +54,4 @@ public class LogSearcher {
 
         bw.close();
     }
-}
+}*/

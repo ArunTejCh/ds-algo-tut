@@ -1,3 +1,4 @@
+/*
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -6,7 +7,9 @@ import java.util.regex.*;
 
 public class Solution {
     public static void main(String args[] ) throws Exception {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        */
+/* Enter your code here. Read input from STDIN. Print output to STDOUT *//*
+
         Scanner input = new Scanner(System.in);
         ArrayList<String> details = new ArrayList<String>();
         while (input.hasNext()) {
@@ -67,4 +70,4 @@ public class Solution {
         return ret;
     }
 
-}
+}*/

@@ -1,6 +1,7 @@
 /*
  * Complete the function below.
- */
+ *//*
+
 
 static String[] checkIP(String[] ip) {
         String[] results = new String[ip.length];
@@ -64,3 +65,4 @@ public static String validIPAddress(String IP) {
         return "Neither";
         }
 
+*/

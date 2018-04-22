@@ -2,7 +2,7 @@ package com.arun.designpatterns;
 
 public class SingletonPattern {
 
-    private static volatile  SingletonPattern instance;
+    private static volatile SingletonPattern instance;
 
     private SingletonPattern(){}
 
