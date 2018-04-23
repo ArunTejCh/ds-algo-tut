@@ -1,0 +1,53 @@
+//April 2018
+
+1. Create a HashMap to store Integer key value pairs
+
+2. https://www.geeksforgeeks.org/knapsack-problem/
+
+3. first question: to a string, is a novel content, such as "Jimmy has an apple,
+it is on the table" to give an exclude word list, such as "an" "a" "is" "the",
+Let you give the most frequently occurring word in this string. 1point3acres.com/bbs
+
+4. Given a log file, ListEach element represents a log file line. Inside each element, there are substrings.
+They are separated by spaces. For example, "a1ws efg7 i90s", String contains only letters and numbers,
+the first substring is id, and the substring following id is given. Log file sort, the letters in the top.
+
+5. Given a String of the for "1 5 9 + D C 3" + = add last two numbers, D = multiply last number by 2,
+ C = remove one number, At the end add all the remaining numbers
+
+6. Given an Employee tree(CEO node) and two employees find the first common manager
+
+7. Given a list of unique integers, construct the binary tree by given order without rebalancing, then find out the distance between two nodes.
+
+8. https://leetcode.com/problems/cut-off-trees-for-golf-event/description/
+
+9. https://www.geeksforgeeks.org/count-number-of-substrings-with-exactly-k-distinct-characters/
+
+10. Each movie has a rate, and then there is a list of movies that are similar to this movie .
+    For example, a movie has a bcd and he is similar to it. b There are similar clk,. . . Then these similarly formed a network, giving a movie number, giving it the top k movie in the network.
+    List<integer>find( int id, int k) https://yidongzhang.gitbooks.io/-oa-1/content/movie-network.html
+
+11. https://leetcode.com/problems/partition-labels/description/
+
+12. Given a string S, you are allowed to convert it to a palindrome by adding characters in front of it. Find and return the shortest palindrome you can find by performing this transformation.
+
+    For example:
+
+    Given aacecaaa, return aaacecaaa.
+
+    Given abcd, return dcbabcd. http://wdxtub.com/interview/14520595479135.html
+
+13. My first question is valid parentheses. Use a stack
+
+14. 1. Given a length of l, find all substrings of length 1 in a string. String characters cannot be repeated. The double pointer O(n) sweeps once, then adds a hash map or trie  2. A string, each character representing a scene. Between two identical characters is considered to be a continuous scene. For example: abcda, you can think of these five characters as the same scene. Or acafghbeb can think of two aca and beb scenes. If there is a coincidence between the scenes, then the scenes are combined. For example, abcab, where abca and bcab are coincident, then the five characters are considered to be the same scene. Give a string to find the longest scene. This is actually to find multiple ranges, and then find the longest link
+
+// onsite
+
+Coding:
+1. find the smallest element in a BST
+2. find the inorder successor of a node in a BST
+3. determine whether a BT is a BST
+Design:
+1.a data structure to store a word and its definition
+2.what if the data is too big, how could you do?
+3.a data structure to improve the performance of query a range of word
