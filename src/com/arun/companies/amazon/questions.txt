@@ -15,7 +15,7 @@ the first substring is id, and the substring following id is given. Log file sor
 5. Given a String of the for "1 5 9 + D C 3" + = add last two numbers, D = multiply last number by 2, - Done
  C = remove one number, At the end add all the remaining numbers
 
-6. Given an Employee tree(CEO node) and two employees find the first common manager
+6. Given an Employee tree(CEO node) and two employees find the first common manager - Done
 
 7. Given a list of unique integers, construct the binary tree by given order without rebalancing, then find out the distance between two nodes.
 
