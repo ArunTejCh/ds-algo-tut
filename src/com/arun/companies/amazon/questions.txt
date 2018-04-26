@@ -4,15 +4,15 @@
 
 2. https://www.geeksforgeeks.org/knapsack-problem/
 
-3. first question: to a string, is a novel content, such as "Jimmy has an apple,
+3. first question: to a string, is a novel content, such as "Jimmy has an apple, - Done
 it is on the table" to give an exclude word list, such as "an" "a" "is" "the",
 Let you give the most frequently occurring word in this string. 1point3acres.com/bbs
 
-4. Given a log file, ListEach element represents a log file line. Inside each element, there are substrings.
+4. Given a log file, ListEach element represents a log file line. Inside each element, there are substrings. - Done
 They are separated by spaces. For example, "a1ws efg7 i90s", String contains only letters and numbers,
 the first substring is id, and the substring following id is given. Log file sort, the letters in the top.
 
-5. Given a String of the for "1 5 9 + D C 3" + = add last two numbers, D = multiply last number by 2,
+5. Given a String of the for "1 5 9 + D C 3" + = add last two numbers, D = multiply last number by 2, - Done
  C = remove one number, At the end add all the remaining numbers
 
 6. Given an Employee tree(CEO node) and two employees find the first common manager
